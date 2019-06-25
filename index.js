@@ -7,9 +7,10 @@ const r = require("request")
  * @param {Object} options
  * @param {Number[]} options.date - An array with date in the form [year,month,day]
  * @param {String} options.comicName - Name of comic strip \n e.g. gafield, bignate
+ * @param {Boolean} options.urlOnly - If true, will return only the url of the image, not wrapped in a Request object
  * @returns {Promise} Promise object represents an instance of request() from the request library for the image
  */
-exports.gocomics = async function request(options) {
+exports.getImage = async function request(options) {
     const dateString = (function createForamttedDate() {
         const date = new Date(...options.date);
         return date.getFullYear() + "/" + (date.getMonth()) + "/" + date.getDate();
@@ -25,5 +26,5 @@ exports.gocomics = async function request(options) {
 
     const imageUrl = parsedPage.querySelector(".item-comic-image img").rawAttrs.split(/ src=/)[1].replace(/"/g, "");
 
-    return r(imageUrl)
+    return options.urlOnly ? imageUrl : r(imageUrl);
 }

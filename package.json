@@ -1,6 +1,6 @@
 {
   "name": "gocomics-api",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A public API for gocomics.com",
   "main": "index.js",
   "scripts": {
