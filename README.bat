@@ -1,0 +1,1 @@
+jsdoc2md index.js > DOCS.md && bash -c  "cat BEFORE.md DOCS.md AFTER.md > README.md"

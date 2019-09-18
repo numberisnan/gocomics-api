@@ -8,7 +8,7 @@ const r = require("request")
  * @param {Number[]} options.date - An array with date in the form [year,month,day]
  * @param {String} options.comicName - Name of comic strip \n e.g. gafield, bignate
  * @param {Boolean} options.URLOnly - If true, will return only the URL of the image, not wrapped in a Request object
- * @returns {Promise|String} Promise object represents an instance of request() from the request library for the image, or String with image URL
+ * @returns {Promise<String|Request>} Promise object represents an instance of request() from the request library for the image, or String with image URL
  */
 exports.getImage = async function request(options) {
     const dateString = (function createForamttedDate() {
