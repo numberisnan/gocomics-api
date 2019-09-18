@@ -4,3 +4,4 @@ node_modules/*
 # README Generation
 BEFORE.md
 AFTER.md
+DOCS.md
