@@ -22,7 +22,7 @@ Request comic image
 | --- | --- | --- |
 | Object |  | options |
 | options.date | <code>Array.&lt;Number&gt;</code> | An array with date in the form [year,month,day] |
-| options.comicName | <code>String</code> | Name of comic strip \n e.g. gafield, bignate |
+| options.comicName | <code>String</code> | Name of comic strip \n e.g. garfield, bignate |
 | options.URLOnly | <code>Boolean</code> | If true, will return only the URL of the image, not wrapped in a Request object |
 
 ## Bugs
