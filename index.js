@@ -11,10 +11,7 @@ const r = require("request")
  * @returns {Promise<String|Request>} Promise object represents an instance of request() from the request library for the image, or String with image URL
  */
 exports.getImage = async function request(options) {
-    const dateString = (function createForamttedDate() {
-        const date = new Date(...options.date);
-        return date.getFullYear() + "/" + (date.getMonth()) + "/" + date.getDate();
-    })();
+    const dateString = options.date.join('/');
 
     console.log(dateString)
 
